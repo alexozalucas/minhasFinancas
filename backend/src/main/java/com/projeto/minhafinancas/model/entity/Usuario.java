@@ -1,8 +1,5 @@
 package com.projeto.minhafinancas.model.entity;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,18 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.projeto.minhafinancas.model.enums.StatusLancamento;
-import com.projeto.minhafinancas.model.enums.Tipolancamento;
-
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Setter;
-import net.bytebuddy.dynamic.loading.InjectionClassLoader.Strategy;
 
 
 
 @Data
 @Builder
+@AllArgsConstructor
 @Entity
 @Table( name ="usuario", schema ="financas")
 public class Usuario {
@@ -40,6 +34,9 @@ public class Usuario {
 	@Column(name ="senha")
 	private String senha;
 	
+	public Usuario(){}
+
+
 	
 	
 
