@@ -73,8 +73,7 @@ public class UsuarioRepositoryTest {
 		entityMenage.persist(usuario);
 		
 		
-		Optional<Usuario> result = repository.findByEmail("usuario@email.com");
-		
+		Optional<Usuario> result = repository.findByEmail("usuario@email.com");		
 		Assertions.assertTrue(result.isPresent());
 	
 		
